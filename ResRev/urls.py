@@ -1,11 +1,12 @@
 from django.urls import path
 from . import views
+from django.views.generic import TemplateView
+
 
 app_name='ResRev'
 urlpatterns = [
-    path('', views.home, name='home'),
-    
+    path('', TemplateView.as_view(template_name="FrontPage.html"), name='home'),
+    path('regist/', TemplateView.as_view(template_name="Register.html") , name='regist'),
+    path('new_rest/', TemplateView.as_view(template_name="new_rest.html") , name='new_rest'),
+    path('registering/', views.registering , name='registering'),
 ]
-    # {% for name in latest_animal_name %}
-    #     <li><a href="/animalSite/{{ Animal.id }}/">{{ name.animal_name }}</a></li>
-    # {% endfor %}
