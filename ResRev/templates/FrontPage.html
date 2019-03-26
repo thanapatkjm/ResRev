@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Choose What to do</h1>
+        <form action="{% url 'ResRev:regist' %}" method="get">
+          <input type="submit" value="Sign Up">
+        </form>
+        <form action="{% url 'ResRev:new_rest' %}" method="get">
+          <input type="submit" value="Add Restaurant">
+        </form>
+    </body>
+</html>
