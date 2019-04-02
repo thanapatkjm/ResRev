@@ -6,6 +6,7 @@ from django.urls import reverse
 def home(request):
     return render(request, 'home.html')
     # return render(request, 'table.html', {'animal_field':animal_field,"animal_list":animal_list})
+
 def new_rest(request):
     pass
 
@@ -18,6 +19,8 @@ def rest_page(request):
 def reviewer(request):
     pass
 
+def registering(request):
+    pass
 
 # <form action="{% url 'animal:created' %}" method="get">
 #   <input type="submit" value="Sign In">
