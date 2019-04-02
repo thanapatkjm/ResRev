@@ -5,9 +5,16 @@
     <title></title>
   </head>
   <body>
-    <form action="{% url 'ResRef:register_done' %}" method="post">
+    {% if err  %}
+      <h1>{{ err }}</h1>
+    {% endif %}
+    <form action="{% url 'ResRev:registering' %}" method="post">
     {% csrf_token %}
-
+    <h2>Register</h2>
+    <a>Username        </a><input type="text" name="username" placeholder="Username"><br>
+    <a>Password        </a><input type="password" name="password" ><br>
+    <a>Confirm Password</a><input type="password" name="Cpassword"><br>
+    <input type="Submit" value="Submit">
     </form>
   </body>
 </html>

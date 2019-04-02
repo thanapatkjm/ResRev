@@ -19,7 +19,8 @@ class Reviewer(models.Model):
     description = models.TextField()
     contact = models.CharField(max_length=80)
     hours = models.IntegerField()
-    password = models.CharField(max_length=20)
+    Hpassword = models.TextField()
+    salt = models.TextField()
     # photo
 class Review(models.Model):
     restaurant = models.ForeignKey(Restaurant,on_delete=models.CASCADE)
