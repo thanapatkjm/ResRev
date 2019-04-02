@@ -6,6 +6,7 @@ from django.views.generic import TemplateView
 app_name='ResRev'
 urlpatterns = [
     path('', TemplateView.as_view(template_name="FrontPage.html"), name='home'),
+    path('LoggingIn/', views.signIn , name='signIn'),
     path('regist/', TemplateView.as_view(template_name="Register.html") , name='regist'),
     path('new_rest/', TemplateView.as_view(template_name="new_rest.html") , name='new_rest'),
     path('registering/', views.registering , name='registering'),

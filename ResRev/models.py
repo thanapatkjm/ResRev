@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+from datetime import datetime    
 
 
 # Create your models here.
@@ -19,8 +20,10 @@ class Reviewer(models.Model):
     description = models.TextField()
     contact = models.CharField(max_length=80)
     hours = models.IntegerField()
+    username = models.TextField()
     Hpassword = models.TextField()
     salt = models.TextField()
+    last_login = models.DateTimeField()
     # photo
 class Review(models.Model):
     restaurant = models.ForeignKey(Restaurant,on_delete=models.CASCADE)
